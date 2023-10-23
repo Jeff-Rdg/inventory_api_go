@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-type Base struct {
+type base struct {
 	id        uuid.UUID
 	createdAt time.Time
 	updatedAt time.Time

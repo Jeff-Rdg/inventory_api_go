@@ -13,8 +13,8 @@ var (
 )
 
 type Provider struct {
-	Base
-	Address
+	base
+	address       Address
 	corporateName string
 	cnpj          string
 }
@@ -31,12 +31,12 @@ func NewProvider(address Address, corporateName, cnpj string) (Provider, error) 
 	}
 
 	return Provider{
-		Base: Base{
+		base: base{
 			id:        uuid.New(),
 			createdAt: time.Now(),
 			updatedAt: time.Now(),
 		},
-		Address:       address,
+		address:       address,
 		corporateName: corporateName,
 		cnpj:          cnpj,
 	}, nil

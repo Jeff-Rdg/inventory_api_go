@@ -11,7 +11,7 @@ var (
 )
 
 type Storage struct {
-	Base
+	base
 	location    string
 	description string
 }
@@ -22,7 +22,7 @@ func NewStorage(location, description string) (Storage, error) {
 	}
 
 	return Storage{
-		Base: Base{
+		base: base{
 			id:        uuid.New(),
 			createdAt: time.Now(),
 			updatedAt: time.Now(),

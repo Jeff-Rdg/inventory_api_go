@@ -11,7 +11,7 @@ var (
 )
 
 type Address struct {
-	Base
+	base
 	city         string
 	state        string
 	country      string
@@ -26,7 +26,7 @@ func NewAddress(city, state, country, number, road, neighborhood string) (Addres
 	}
 
 	return Address{
-		Base: Base{
+		base: base{
 			id:        uuid.New(),
 			createdAt: time.Now(),
 			updatedAt: time.Now(),

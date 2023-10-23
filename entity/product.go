@@ -14,7 +14,7 @@ var (
 )
 
 type Product struct {
-	Base
+	base
 	name        string
 	description string
 	category    enum.Category
@@ -33,7 +33,7 @@ func NewProduct(name, description, category string) (Product, error) {
 	}
 
 	return Product{
-		Base: Base{
+		base: base{
 			id:        uuid.New(),
 			createdAt: time.Now(),
 			updatedAt: time.Now(),
